@@ -12,7 +12,7 @@ The goal of this project is to understanding influential variables and relations
 3. [Hypothesis Testing](#hypothesis-testing)
 
 ## Workflow  
-Scraped HTML with Selenium and BeautifulSoup [[Link]("./src/extract_html.ipynb")]
+Scraped HTML with Selenium and BeautifulSoup [[Link]("/src/extract_html.ipynb")]
 
 ## Exploratory Data Analysis  
 <p align="center">

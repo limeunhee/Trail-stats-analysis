@@ -1,2 +1,5 @@
 #DS_STORE
 .DS_Store
+
+# Jupyter checkpoints
+./src/.ipynb_checkpoints/*

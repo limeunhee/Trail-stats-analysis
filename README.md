@@ -1,9 +1,9 @@
 # Alltrails Recommender
-Hiking is a good way to spend time, enjoy nature, and can even be a way to explore a new city. Especially this year, due to COVID, it has become even more popular as it is considered as one of the outdoor activities with relatively low potential risk. 
+Hiking is a good way to exercise and spend time with friends and family, while also enjoying the surrounding nature. There are a few existing applications and websites that provide information about various hiking trails in the US. When hikers search for new trails to hike on, these websites can be valuable resources with centralized information. While there is a wealth of information on these websites, it is still up to the users to look through various trails and make decision on which one to take on next.   
 
-There are a few existing trails apps and websites that provide information about various trails in the US. When hikers are searching for new trails to hike on, they make decisions based on ratings from existing trail information on the web. 
-
-The goal of this project is to understanding influential variables and relationships that affect rating of a trail using data from Alltrails.com.
+The goal of this project is to:  
+1. Understand influential variables and relationships that affect trail rating  
+2. Build a trail recommender that takes user’s favorite trail as an input and recommend top 5 trails that are similar to the user input
 
 ## Table of Contents  
 ---
@@ -12,13 +12,17 @@ The goal of this project is to understanding influential variables and relations
 3. [Hypothesis Testing](#hypothesis-testing)
 
 ## Workflow  
-Scraped HTML with Selenium and BeautifulSoup [[Link](./src/extract_html.ipynb)]
+<p align="center">
+  <img src="./images/ProjectFlow.png">
+<br>
+<b>Figure 1.</b> Project workflow for Alltrails recommender system
+</p>
 
 ## Exploratory Data Analysis  
 <p align="center">
   <img src="./images/star_rating_histogram.png" width=400/>
 <br>
-<b>Figure 1.</b> Histogram of star rating of trails in the US
+<b>Figure 2.</b> Histogram of star rating of trails in the US
 </p>
 
 ## Hypothesis Testing

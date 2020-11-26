@@ -33,7 +33,7 @@ The trails star rating distribution is left skewed with over 91% of the trails h
   In order to understand how the difficulty of trail affects star rating, histogram of star rating is split into 3 groups by difficulty (i.e. easy, modreate, hard). While star rating of 4.5 is the most prevalent rating in all three difficulty groups, the percentage of trails with 4.5 star rating increased with difficulty (easy 50.6%, moderate 62.9%, hard 66.4%). Additionally, the percentage of 5.0 star rating was the highest for hard trails (15.4%), follwed by moderate (3.37%) and easy (1.93%). The trails with 3 or less stars remained below 3.5% in all three groups. As a result, the average star rating value for easy, moderate, and hard trail groups are 4.19, 4.30, and 4.46 respectively. While this coud seem counterintuitive, there can be i) a self selection of people who would choose to go on difficult hikes, ii) nature/scenary that can be seen in more difficult trails, or iii) a greater sense of accomplishment/fulfillment felt by hikers after they finish difficult trails.
 
 <p align="center">
-  <img src="./images/star_rating_histogram_by_difficulty.png", title="Github Logo" >
+  <img src="./images/star_rating_histogram_by_difficulty.png" >
 <br>
 <b>Figure 3.</b> Histogram of star rating of trails by difficulty (easy, moderate, hard) 
 </p>
@@ -42,17 +42,17 @@ The trails star rating distribution is left skewed with over 91% of the trails h
   In order to understand the relationship between geographic location and star ratings, the trails were grouped by states and their average star rating was calculated. Figure 4 shows the average trail star rating for each state:
   
   <p align="center">
-  <img src="./images/map_star.png" >
+  <img src="./images/map_star.png", width=400/ >
 <br>
 <b>Figure 4.</b> Average star rating by state
 </p>
 <p align="center">
-  <img src="./images/map_difficulty.png" >
+  <img src="./images/map_difficulty.png", width=400/ >
 <br>
 <b>Figure 5.</b> Average difficulty rating by state
 </p>
 <p align="center">
-  <img src="./images/map_low_star.png" >
+  <img src="./images/map_low_star.png", width=400/ >
 <br>
 <b>Figure 6.</b> Percentage of trails with 3.5 or less stars by state
 </p>

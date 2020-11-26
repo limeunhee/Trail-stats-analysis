@@ -42,7 +42,7 @@ The trails star rating distribution is left skewed with over 91% of the trails h
   In order to understand the relationship between geographic location and star ratings, the trails were grouped by states and their average star rating was calculated. Figure 4 shows the average trail star rating for each state:
   
   <p align="center">
-  <img src="./images/map_stars.png" >
+  <img src="./images/map_star.png" >
 <br>
 <b>Figure 4.</b> Average star rating by state
 </p>

@@ -52,7 +52,7 @@ def get_html(state):
             driver.find_element_by_css_selector('button.styles-module__button___1nuva ').click()
             time.sleep(1)
             page_num += 1
-            if page_num==49: # After clicking "load more" 49 times, stop clicking "load more"
+            if page_num==99: # After clicking "load more" 99 times, stop clicking "load more"
                 break
         except:
             break
@@ -73,7 +73,7 @@ def save_html(html, state):
     """
     
     soup = BeautifulSoup(html, "lxml")
-    filename = '/Users/eunheelim/Capstone1/test_html/'+ state +'.html'
+    filename = '/Users/eunheelim/Capstone1/tes2_html/'+ state +'.html'
     with open(filename, 'w') as file:
         file.write(str(soup))
     return

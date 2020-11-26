@@ -64,7 +64,7 @@ def get_trail_urls(state_html):
         each_urls.append(each_url)
 
         # Save list of url to .txt file
-        filename = "/Users/eunheelim/Capstone1/urls/" + state + ".txt"
+        filename = "/Users/eunheelim/Capstone1/url2/" + state + ".txt"
         np.savetxt(filename, each_urls, fmt="%s", delimiter=",")
 
         trail_info = card.find_all("div", {"class": trail_info_class})
@@ -83,7 +83,7 @@ def get_trail_urls(state_html):
             distance = None
         distances.append(distance)
 
-        filename = "/Users/eunheelim/Capstone1/data/" + state + ".csv"
+        filename = "/Users/eunheelim/Capstone1/data4/" + state + ".csv"
         pd.DataFrame({"durations": durations, "distances": distances}).to_csv(filename)
         
     return
@@ -91,7 +91,7 @@ def get_trail_urls(state_html):
 
 def main():
     pool = Pool()
-    pool.map(get_trail_urls, glob.iglob(r"/Users/eunheelim/Capstone1/test_html/*.html"))
+    pool.map(get_trail_urls, glob.iglob(r"/Users/eunheelim/Capstone1/tes2_html/*.html"))
 
 
 if __name__ == "__main__":

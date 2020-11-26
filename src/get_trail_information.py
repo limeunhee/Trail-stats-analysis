@@ -1,5 +1,6 @@
 import requests
 from requests import get
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
@@ -19,6 +20,7 @@ def try_except(prompt, lst):
 
 def get_trail_info(state_trail_urls):
     print(state_trail_urls)
+    state = state_trail_urls[32:].split('.')[0]
     #filepath = "/Users/eunheelim/Capstone1/urls/washington.txt"
     file1 = open(state_trail_urls, 'r') 
     urls = file1.readlines() 
@@ -46,24 +48,28 @@ def get_trail_info(state_trail_urls):
     # Make for loop into functions /pass in list of URLS as inpur argument
     count = 0
     for trail_url in urls:
-        print(trail_url)
         count += 1
-        if count % 10 == 0:
-            print(count)
+        if count % 50 == 0:
+            print(f"{state}:{count}")
 
-        results = requests.get(trail_url[0:-1])
-        soup=BeautifulSoup(results.text, 'html.parser')
+        #results = requests.get(trail_url[0:-1])
+        results = urlopen(trail_url[0:-1])
+        soup=BeautifulSoup(results, 'html.parser')
 
 
         class_name_10='styles-module__ssrFallback___34ups [object Object] styles-module__flexContainer___1o9fS styles-module__slidingTabs___25XGa'
         div10=soup.find_all('div',{'class':class_name_10})
         
-        print(div10)
-        stats = [i.text for i in div10[0].find_all('div')]
+        try:
+            stats = [i.text for i in div10[0].find_all('div')]
         
-        n_photos.append(int(stats[1][8:-1]))
-        n_recordings.append(int(stats[2][12:-1]))
-        n_completed.append(int(stats[3][11:-1]))
+            n_photos.append(int(stats[1][8:-1]))
+            n_recordings.append(int(stats[2][12:-1]))
+            n_completed.append(int(stats[3][11:-1]))
+        except:
+            n_photo.append(None)
+            n_recordings.append(None)
+            n_completed.append(None)
 
 
         class_name_3='styles-module__content___1GUwP'
@@ -71,36 +77,59 @@ def get_trail_info(state_trail_urls):
 
 
         #Get trail name
-        name ="container.h1['title']"
-        try_except(name, names)
+        try:
+            name = container.h1['title']
+        except:
+            name = None
+        names.append(name)
 
         #Get trail location
-        location = "container.a['title']"
-        try_except(location,locations)
+        try:
+            location = container.a['title']
+        except:
+            location = None
+        locations.append(location)
 
         #Get trail difficulty
-        difficulty= "container.span.text"
-        try_except(difficulty, difficulties)
+        try:
+            difficulty = container.span.text
+        except:
+            difficulty = None
+        difficulties.append(difficulty)
 
         #Get trail elevation
-        elevation ="((soup.find('section', {'id':'trail-stats'})).find('span',{'class':'elevation-icon'}) \
+        try:
+            elevation = (
+                ((soup.find('section', {'id':'trail-stats'})).find('span',{'class':'elevation-icon'}) \
                 .find('span',{'class':'detail-data xlate-none'}) \
                 .text[13:].split('f'))[0] \
-                .replace(',','')"
-        try_except(elevation, elevations)
+                .replace(',','')
+            )
+        except:
+            elevation = None
+        elevations.append(elevation)
 
         #Get trail route type
-        a =soup.find('section', {'id':'trail-stats'});
-        route_type = "a.find_all('span',{'class':'detail-data'})[2].text"
-        try_except(route_type, route_types)
+        a = soup.find('section', {'id':'trail-stats'})
+        try:
+            route_type = a.find_all('span',{'class':'detail-data'})[2].text
+        except:
+            route_type = None
+        route_types.append(route_type)
 
         #Get trail short description
-        short_description="soup.find('p',{'class':'xlate-google line-clamp-4'}).text"
-        try_except(short_description, short_descriptions)
+        try:
+            short_description = soup.find('p',{'class':'xlate-google line-clamp-4'}).text
+        except:
+            short_description = None
+        short_descriptions.append(short_description)
 
         #Get trail long description
-        long_description="soup.find('p',{'class':'styles-module__displayText___17Olo'}).text"
-        try_except(long_description, long_descriptions)
+        try:
+            long_description = soup.find('p',{'class':'styles-module__displayText___17Olo'}).text
+        except:
+            long_description = None
+        long_descriptions.append(long_description)
 
         #Get trail rating container
         a=(container.find_all('meta'))
@@ -121,8 +150,11 @@ def get_trail_info(state_trail_urls):
 
 
         tag_list=[]
-        for item in tags:
-            tag_list.append(item.text)
+        try:
+            for item in tags:
+                tag_list.append(item.text)
+        except:
+            pass
 
         tags_list.append(tag_list)
 
@@ -146,7 +178,7 @@ def get_trail_info(state_trail_urls):
     })
 
 
-    filename='/Users/eunheelim/Capstone1/data3/'+filepath[32:].split('.')[0]+'2.csv'
+    filename='/Users/eunheelim/Capstone1/data5/' + state + '2.csv'
 
     #add dataframe to csv file named 'filename.csv'
     trails.to_csv(filename)
@@ -156,7 +188,7 @@ def get_trail_info(state_trail_urls):
     
 def main():
     pool = Pool()
-    pool.map(get_trail_info, glob.iglob(r'/Users/eunheelim/Capstone1/urls/*.txt'))
+    pool.map(get_trail_info, glob.iglob(r'/Users/eunheelim/Capstone1/url2/*.txt'))
 
 
 if __name__ == "__main__":

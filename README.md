@@ -25,4 +25,11 @@ The goal of this project is to:
 <b>Figure 2.</b> Histogram of star rating of trails in the US
 </p>
 
+<p align="center">
+  <img src="./images/star_rating_histogram_by_difficulty.png" width=400/>
+<br>
+<b>Figure 2.</b> Histogram of star rating of trails by difficulty in the US
+</p>
+
+
 ## Hypothesis Testing

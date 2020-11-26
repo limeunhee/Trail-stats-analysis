@@ -57,4 +57,9 @@ The trails star rating distribution is left skewed with over 91% of the trails h
 <b>Figure 6.</b> Percentage of trails with 3.5 or less stars by state
 </p>
 
+|![](./images/map_star.png)|![](./images/map_difficulty.png)|![](./images/map_low_star.png)|
+|-|-|-|
+|<b>Figure 4.</b> Average star rating by state|<b>Figure 5.</b> Average difficulty rating by state|<b>Figure 6.</b> Percentage of trails with 3.5 or less stars by state|
+
+
 ## Hypothesis Testing

@@ -38,28 +38,33 @@ The trails star rating distribution is left skewed with over 91% of the trails h
 <b>Figure 3.</b> Histogram of star rating of trails by difficulty (easy, moderate, hard) 
 </p>
 
-&nbsp;
+&nbsp;  
 
 ### How does star ratings depend on geographic locations of trails?
   In order to understand the relationship between geographic location and star ratings, the trails were grouped by states and their average star rating was calculated. Figure 4 shows the average trail star rating for each state:
   
 
 <p align="center">
-  <img src="./images/Map2.png" >
+  <img src="./images/Map2.png" width=1000/>
 <br>
 &nbsp;
 <b>Figure 6.</b> Map of average star rating, average difficulty, and percentage of lowly rated trails by state 
 </p>
 
-From the star rating map, we can see that the states along the West and the East coasts have higher average trail ratings compared to central states. Average difficulty level also shows similar trend where trails in West and East coast states have higher average difficulty compared to the central states. The central states had higher percentage of trails that were rated 3.5 stars or below. This trend can be explained by the locations of the mountain ranges in the US [figure 7]. Regions with major mountrain ranges have trails with higher difficulty and higher star ratings, wheares regions marked with plains have less trails to offer.
+&nbsp;  
 
+From the star rating map, we can see that the states along the West and the East coasts have higher average trail ratings compared to central states. Average difficulty level also shows similar trend where trails in West and East coast states have higher average difficulty compared to the central states. The central states had higher percentage of trails that were rated 3.5 stars or below. This trend can be explained by the locations of the mountain ranges in the US [figure 7]. Regions with major mountrain ranges have trails with higher difficulty and higher star ratings, wheares regions marked with plains have less trails to offer.
+&nbsp;  
 
 <p align="center">
-  <img src="./images/tag_words.png">
+  <img src="./images/tag_words.png" width=1000/>
 <br>
-&nbsp;
+&nbsp;  
 <b>Figure 7.</b> List of top 20 tag words from 5 states with highest and lowest average trail ratings
 </p>
+
+We can also look at the most frequently used tags in order to gain more insight into trails in these states. I have grouped them states with top 5 and bottom 5 average star ratings and made a histogram of tag words. While many of the words in the list are similar for the two groups, the list from bottom 5 states have i) 'kid friendly' ranked as 4th most used tag vs 11th in the top 5 states list, ii) tags like 'stroller friendly' and 'wheelchair friendly', which suggest that these state likely have flat and less challenging trails.
+
 
 
 ## Hypothesis Testing

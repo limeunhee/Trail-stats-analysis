@@ -68,3 +68,53 @@ We can also look at the most frequently used tags in order to gain more insight 
 
 
 ## Hypothesis Testing
+1. Difficulty level vs average star rating
+
+First, the one-way ANOVA test was conducted to test the null hypothesis below. Sample size, mean, and variance of each group is shown below:
+
+H0: mean star rating for the three groups are the same  
+Ha: mean star rating for the three groups are not the same  
+⍺ = 0.05  
+
+
+<p align="center">
+  <img src="./images/stats_difficulty.png" width=600/>
+<br>
+&nbsp;  
+<b>Table 1.</b> Stats for hypothesis testing 1 
+</p>
+
+Result: 
+Using scipy in Python, the returned F value was 778 and p-value was 0.0 (meaning that the probability is very small and is close to 0 practically.). Using a Welch's T-test (assuming non-equal population variance) for three pairs (easy, moderate), (moderate, hard), and (easy, hard), it is also shown that none of have the same mean star rating. This is as expected from the findings shown earlier, where the hard trails have more percentage of 4.5 and 5 star ratings compared to easy and moderate trails.
+
+
+2. Route-type vs average star rating
+
+First, the one-way ANOVA test was conducted to test the null hypothesis below. Sample size of each group is shown below:
+
+<p align="center">
+  <img src="./images/star_rating_histogram_by_route_type.png" width=1000/>
+<br>
+&nbsp;  
+<b>Table 1.</b> Stats for hypothesis testing 2 
+</p>
+
+<p align="center">
+  <img src="./images/stats_route_type.png" width=600/>
+<br>
+&nbsp;  
+<b>Table 1.</b> Stats for hypothesis testing 2 
+</p>
+
+
+H0: mean star rating for the three groups are the same  
+Ha: mean star rating for the three groups are not the same   
+⍺ = 0.05  
+
+Result: 
+Using scipy in Python, the returned F value was 116 and p-value was 7.9E-51. Using a Welch's T-test (assuming non-equal population variance) for three pairs (loop, out & back), (loop, point to point), and (out and back, point to point), it is also shown we can reject the null hypothesis. Thus, the mean star rating for the different route types are not the same. Looking at the star rating distribution of the point to point trails, we see that there is higher percentage of 5 star trails in this group. Point-to-point trails are the trails with different start and end points, which are generally long distance trails. Similar to difficulty, it is possible that there could be a greater sense of achievement or some self-selection process of people who choose to go on these kind of hikes and review them.
+
+
+
+
+

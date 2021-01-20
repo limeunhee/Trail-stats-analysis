@@ -122,3 +122,5 @@ Using `scipy`, the returned F value was 116 and p-value was 7.9 x 10<sup>-51</su
 
 
 
+## Summary and future work
+In this work, scraping of trail information from Alltrails.com and influential variables and patterns determining star rating has been explored. On average, harder, longer, and higher elevation gain in trails were positivley correlated with higher star rating. Regions in the US that correspond to the major mountain ranges had higher ratings compared to other regions, presumably due to more non-flat, diverse hikes offered. For the future work, I will continue on to build a trail recommender. 

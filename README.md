@@ -1,9 +1,6 @@
-# Alltrails Recommender
-Hiking is a good way to exercise and spend time with friends and family, while also enjoying the surrounding nature. There are a few existing applications and websites that provide information about various hiking trails in the US. When hikers search for new trails to hike on, these websites can be valuable resources with centralized information. While there is a wealth of information on these websites, it is still up to the users to look through various trails and make decision on which one to take on next.   
+# Trail Stats Analysis
+Hiking is a good way to exercise and spend time with friends and family, while also enjoying the surrounding nature. There are a few existing applications and websites that provide information about various hiking trails in the US. When hikers search for new trails to hike on, these websites can be valuable resources with centralized information. While there is a wealth of information on these websites, it is still up to the users to look through various trails and make decision on which one to take on next. The goal of this project is to understand influential variables and relationships that affect trail rating.
 
-The goal of this project is to:  
-1. Understand influential variables and relationships that affect trail rating  
-2. Build a trail recommender that takes user’s favorite trail as an input and recommend top 5 trails that are similar to the user input
 
 ## Table of Contents  
 ---
@@ -125,3 +122,5 @@ Using `scipy`, the returned F value was 116 and p-value was 7.9 x 10<sup>-51</su
 
 
 
+## Summary and future work
+In this work, scraping of trail information from Alltrails.com and influential variables and patterns determining star rating has been explored. On average, harder, longer, and higher elevation gain in trails were positivley correlated with higher star rating. Regions in the US that correspond to the major mountain ranges had higher ratings compared to other regions, presumably due to more non-flat, diverse hikes offered. For the future work, I will continue on to build a trail recommender. 

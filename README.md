@@ -37,10 +37,22 @@ The trails star rating distribution is left skewed with over 91% of the trails h
 <p align="center">
   <img src="./images/star_rating_histogram_by_difficulty.png" >
 <br>
-<b>Figure 3.</b> Histogram of star rating of trails by difficulty (easy, moderate, hard) 
+<b>Figure 3-1.</b> Histogram of star rating of trails by difficulty (easy, moderate, hard) 
 </p>
 
 &nbsp;  
+
+Additionally, similar trend is seen for distance, elevation, and duration which is likely due to correlations between these variables.
+
+<p align="center">
+  <img src="./images/violinplot.png" >
+<br>
+<b>Figure 3-2.</b> Violin plot showing distribution of star rating of trails by distance, elevation, and duration 
+</p>
+
+&nbsp;  
+
+
 
 ### How does star ratings depend on geographic locations of trails?
   In order to understand the relationship between geographic location and star ratings, the trails were grouped by states and their average star rating was calculated. Figure 4 shows the average trail star rating for each state:
